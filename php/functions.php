@@ -3,7 +3,7 @@
 function connect_to_db()
 {
     // DB接続
-    $dbn = 'mysql:dbname=gsf_d12_12;charset=utf8mb4;port=3306;host=localhost';
+    $dbn = 'mysql:dbname=Our_nice_house;charset=utf8mb4;port=3306;host=localhost';
     $user = 'root';
     $pwd = '';
 
