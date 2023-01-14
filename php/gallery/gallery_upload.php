@@ -10,8 +10,8 @@ $filename = basename($file['name']);
 $tmp_path = $file['tmp_name'];
 $file_err = $file['error'];
 $filesize = $file['size'];
-$upload_dir = '/Applications/XAMPP/xamppfiles/htdocs/08_PHP_HomeWork03/images/';
-
+$upload_dir = '/Applications/XAMPP/xamppfiles/htdocs/09_PHP_HomeWork01/images/';
+$display_dir = 'images/';
 
 
 // $upload_dir = $tmp_path;
@@ -19,7 +19,7 @@ $upload_dir = '/Applications/XAMPP/xamppfiles/htdocs/08_PHP_HomeWork03/images/';
 $save_filename = date('YmdHis') . $filename;
 $err_msgs = array();
 $save_path = $upload_dir . $save_filename; 
-
+var_dump($save_path);
 
 
 // var_dump($save_filename);
@@ -59,10 +59,10 @@ if($filesize>1048576 || $file_err == 2){
 $allow_ext = array('jpeg', 'jpg', 'png');
 $file_ext = pathinfo($filename, PATHINFO_EXTENSION);
 
-echo '<pre>';
-var_dump($allow_ext);
-var_dump($file_ext);
-echo '</pre>';
+// echo '<pre>';
+// var_dump($allow_ext);
+// var_dump($file_ext);
+// echo '</pre>';
 
 if(!in_array(strtolower($file_ext),$allow_ext)){
     echo '画像を添付してください。';

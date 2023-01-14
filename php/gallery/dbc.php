@@ -41,3 +41,16 @@ try{
 }
 
 
+/**
+ * 
+ * 
+ * 
+ */
+function getAllFile(){
+
+    $pdo =connect_to_db();
+    $sql = "SELECT * FROM file_table";
+    $fileData = $pdo->query($sql);
+
+    return $fileData;
+}

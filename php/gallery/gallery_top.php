@@ -1,3 +1,14 @@
+<?php
+require_once "./dbc.php";
+$files= getAllFile();
+
+
+
+?>
+
+
+
+
 <!DOCTYPE html>
 <html lang="ja">
 <head>
@@ -28,6 +39,14 @@
       </div>
     </form>
   
+    <div>
+      <?php foreach($files as $file):?>
+        <img src="<?php echo "{$file['display_dir']}"; ?>" alt="">
+        <?php var_dump($file['display_dir'] ."です。") ?>
+        <p><?php echo "{$file['description']}"; ?></p>
+      <?php endforeach; ?>
+
+    </div>
 
 
     <button type="button" class="btn btn-light" onclick="location.href='../../home.php'">Homeへ</button>
