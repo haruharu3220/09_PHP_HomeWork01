@@ -108,6 +108,8 @@ https://www.php.net/manual/ja/reserved.variables.files.php
 Streamline フリーアイコンサイト
 https://www.streamlinehq.com/elements/stickers
 
+【Google提供】マテリアルアイコンの使い方とカスタマイズ方法まとめ  
+https://giga-log.com/material-icons-use/#Material_Icons-5
 
 ## 企画で参考にしたサイト
 【最新2022年版】家づくりで役立つ人気アプリ5選！iPhone＆Android対応  
