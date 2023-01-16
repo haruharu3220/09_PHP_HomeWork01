@@ -12,11 +12,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>favoriteHouse</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
 </head>
 <body>
+
+    <span class="material-symbols-outlined" style="color:pink; font-size: 84px;">timelapse</span>
+
     <h1>ログイン画面</h1>
-    <p>未実装</p>
-    <form>
+    <form action="" method="POST">
         <div class="form-group col-md-3">
             <label for="exampleInputEmail1">Email address</label>
             <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
