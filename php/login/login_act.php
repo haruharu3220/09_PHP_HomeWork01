@@ -6,8 +6,8 @@ include(dirname(__FILE__,2).'/functions.php');
 $username = $_POST['username'];
 $password = $_POST['password'];
 
-// var_dump($username);
-// var_dump($password);
+var_dump($username);
+var_dump($password);
 
 // DB接続
 $pdo = connect_to_db();
@@ -29,9 +29,10 @@ try {
 
 // ユーザ有無で条件分岐
 $user = $stmt->fetch(PDO::FETCH_ASSOC);
+var_dump($sql);
+var_dump($user);
 if (!$user) {
   echo "<p>ログイン情報に誤りがあります</p>";
-  // echo "<a href=todo_login.php>ログイン</a>";
   exit();
 } else {
     echo "<p>ログインします</p>";
@@ -39,7 +40,7 @@ if (!$user) {
   $_SESSION['session_id'] = session_id();
   $_SESSION['is_admin'] = $user['is_admin'];
   $_SESSION['username'] = $user['username'];
-  // header("Location:todo_read.php");
+  header("Location:../../home.php");
   exit();
 }
 
