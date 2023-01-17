@@ -19,7 +19,7 @@
     <span class="material-symbols-outlined" style="color:pink; font-size: 84px;">timelapse</span>
 
     <h1>ログイン画面</h1>
-    <form action="php/login/user_register_act.php" method="POST">
+    <form action="php/login/login_act.php" method="POST">
         <div class="form-group col-md-3">
             <label for="exampleInputEmail1">User Name</label>
             <input type="text" class="form-control" id="exampleInputEmail1" name="username" aria-describedby="emailHelp" placeholder="User Name">

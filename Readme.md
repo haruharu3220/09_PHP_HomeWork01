@@ -104,12 +104,18 @@ https://design-studio-f.com/blog/bootstrap-utilities-spacing/
 $_FILES  
 https://www.php.net/manual/ja/reserved.variables.files.php
 
-## デザインで役に立ったサイト
+PHPファイルのインクルードで上の階層を読み込みたい  
+https://www.toccaville.com/blog/php-require_once-different-directory/
+
+## デザインで役に立ったサイト  
 Streamline フリーアイコンサイト
 https://www.streamlinehq.com/elements/stickers
 
 【Google提供】マテリアルアイコンの使い方とカスタマイズ方法まとめ  
 https://giga-log.com/material-icons-use/#Material_Icons-5
+
+Tailwind CSS で最初に思う疑問、Bootstrap との違いとは？  
+https://www.gaji.jp/blog/2021/12/13/8732/
 
 ## 企画で参考にしたサイト
 【最新2022年版】家づくりで役立つ人気アプリ5選！iPhone＆Android対応  

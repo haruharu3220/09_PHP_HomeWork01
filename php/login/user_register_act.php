@@ -1,5 +1,5 @@
 <?php
-require_once( ../function/functions.php );
+include(dirname(__FILE__,2).'/functions.php');
 
 if (
   !isset($_POST['username']) || $_POST['username'] === '' ||

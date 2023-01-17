@@ -7,7 +7,7 @@ function connect_to_db()
     $user = 'root';
     $pwd = '';
 
-    var_dump("functions関数を呼び出しました。");
+    // var_dump("functions関数を呼び出しました。");
     try {
         return new PDO($dbn, $user, $pwd);
         
