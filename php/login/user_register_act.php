@@ -1,5 +1,5 @@
 <?php
-include('functions.php');
+require_once( ../function/functions.php );
 
 if (
   !isset($_POST['username']) || $_POST['username'] === '' ||
