@@ -19,10 +19,10 @@
     <span class="material-symbols-outlined" style="color:pink; font-size: 84px;">timelapse</span>
 
     <h1>ログイン画面</h1>
-    <form action="" method="POST">
+    <form action="php/login/user_register_act.php" method="POST">
         <div class="form-group col-md-3">
             <label for="exampleInputEmail1">Email address</label>
-            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+            <input type="email" class="form-control" id="exampleInputEmail1" name="" aria-describedby="emailHelp" placeholder="Enter email">
             <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
         </div>
         <div class="form-group col-md-3 ">
