@@ -3,9 +3,9 @@ require_once "./dbc.php";
 // var_dump(getAllFile()); →OK
 $files= getAllFile();
 
-foreach($files as $file ){
-  print_r($file);
-}
+// foreach($files as $file ){
+//   print_r($file);
+// }
 
 // var_dump("display_dir");
 // var_dump($file);
@@ -25,7 +25,9 @@ foreach($files as $file ){
 </head>
 <body>
     <h1>ギャラリー</h1>
-
+    <img src="/Applications/XAMPP/xamppfiles/htdocs/09_PHP_HomeWork01/images/20230121054152Moony.jpg" alt="">
+    <img src="../../images/20230121054152Moony.jpg" alt="">
+    
     <form enctype="multipart/form-data" action="./gallery_upload.php" method="POST">
       <div class="file-up">
         <!-- UPする画像が1MB以上なら拒否する -->
@@ -46,9 +48,14 @@ foreach($files as $file ){
   
     <div>
       <?php foreach($files as $file):?>
-        <img src="<?php echo "{$file['display_dir']}"; ?>" alt="">
-        <?php var_dump($file['display_dir'] . "です。");?>
-        <p><?php echo "{$file['description']}"; ?></p>
+        <!-- <img src="<?php echo "{$file['display_dir']}"; ?>" alt=""> -->
+        
+        <?php var_dump("★★★file['file_name']=".$file['file_name'] . "です。");?>  
+        <!-- <img src="<?php echo "../../images/".$file['file_name']; ?>" alt=""> -->
+        
+        
+        <?php var_dump("★★★file['file_path']=".$file['file_path'] . "です。");?>
+        <p><?php var_dump("file['description']=".$file['description']) ; ?></p>
       <?php endforeach; ?>
 
     </div>
