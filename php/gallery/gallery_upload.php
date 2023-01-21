@@ -13,16 +13,16 @@ $filesize = $file['size'];
 $upload_dir = dirname(__FILE__,3 ). '/images/';
 // $display_dir = 'images/';
 
-var_dump(dirname(__FILE__,3 ));
-echo "</br>";
-var_dump($upload_dir);
-echo "</br>";
+// var_dump(dirname(__FILE__,3 ));
+// echo "</br>";
+// var_dump($upload_dir);
+// echo "</br>";
 // $upload_dir = $tmp_path;
 
 $save_filename = date('YmdHis') . $filename;
 $err_msgs = array();
 $save_path = $upload_dir . $save_filename; 
-var_dump($save_path);
+// var_dump($save_path);
 
 
 // var_dump($save_filename);
@@ -72,9 +72,9 @@ if(!in_array(strtolower($file_ext),$allow_ext)){
     echo '<br>';
 }
 
-var_dump($tmp_path);
+var_dump("<br>★★★tmp_path=".$tmp_path);
 echo "<br/>";
-var_dump($save_path);
+var_dump("<br>★★★save_path=".$save_path);
 
 
 if (count($err_msgs) === 0) {
@@ -82,24 +82,19 @@ if (count($err_msgs) === 0) {
 
 
     if (is_uploaded_file($tmp_path)) {
-        // echo $filename.'をアップしました。';
-        // var_dump($upload_dir.$save_filename);
-        // var_dump($tmp_path.'/'.$filename);
-
+        
         if (move_uploaded_file($tmp_path, $save_path)) {
-            if (move_uploaded_file($tmp_path, $tmp_path)) {
-                echo $filename . 'を' . $upload_dir . 'にアップしました。';
-                //DBに保存(ファイル名、ファイルが存在するファイルパス、キャプション)
-                $result = fileSave($filename, $save_path, $caption);
-
-            } else {
-                echo $tmp_path . 'を' . $save_path . 'ファイルの移動に失敗しました。';
-            }
+            echo $filename . 'を' . $upload_dir . 'にアップしました。';
+            //DBに保存(ファイル名、ファイルが存在するファイルパス、キャプション)
+            $result = fileSave($filename, $save_path, $caption);
         } else {
-            echo 'ファイルが選択されていません。';
-            echo '<br>';
+            echo '<br>$tmp_path＝'.$tmp_path . 'を<br>' .'$save_path='. $save_path . 'ファイルの移動に失敗しました。';
         }
+    } else {
+        echo 'ファイルが選択されていません。';
+        echo '<br>';
     }
+
 }
 
 
