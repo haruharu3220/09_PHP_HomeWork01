@@ -43,14 +43,15 @@ try{
 
 /**
  * 
- * 
- * 
+ * ファイルデータを取得
+ * @return PDOStatement|bool
  */
 function getAllFile(){
 
     $pdo =connect_to_db();
     $sql = "SELECT * FROM file_table";
     $fileData = $pdo->query($sql);
-
+    var_dump($fileData);
     return $fileData;
+
 }

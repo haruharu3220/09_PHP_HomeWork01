@@ -1,12 +1,16 @@
 <?php
 require_once "./dbc.php";
+// var_dump(getAllFile()); →OK
 $files= getAllFile();
 
-
+// foreach($files as $file ){
+//   print_r($file);
+// }
+var_dump("display_dir");
+var_dump($file);
+var_dump($file['display_dir']);
 
 ?>
-
-
 
 
 <!DOCTYPE html>
@@ -42,7 +46,7 @@ $files= getAllFile();
     <div>
       <?php foreach($files as $file):?>
         <img src="<?php echo "{$file['display_dir']}"; ?>" alt="">
-        <?php var_dump($file['display_dir'] ."です。") ?>
+        <?php var_dump($file['display_dir'] . "です。");?>
         <p><?php echo "{$file['description']}"; ?></p>
       <?php endforeach; ?>
 

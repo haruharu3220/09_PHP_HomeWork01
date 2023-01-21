@@ -6,8 +6,8 @@ include(dirname(__FILE__,2).'/functions.php');
 $username = $_POST['username'];
 $password = $_POST['password'];
 
-var_dump($username);
-var_dump($password);
+// var_dump($username);
+// var_dump($password);
 
 // DB接続
 $pdo = connect_to_db();
@@ -33,6 +33,7 @@ var_dump($sql);
 var_dump($user);
 if (!$user) {
   echo "<p>ログイン情報に誤りがあります</p>";
+  echo "<a href=index.php>ログイン</a>";
   exit();
 } else {
     echo "<p>ログインします</p>";

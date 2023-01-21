@@ -10,10 +10,13 @@ $filename = basename($file['name']);
 $tmp_path = $file['tmp_name'];
 $file_err = $file['error'];
 $filesize = $file['size'];
-$upload_dir = '/Applications/XAMPP/xamppfiles/htdocs/09_PHP_HomeWork01/images/';
-$display_dir = 'images/';
+$upload_dir = dirname(__FILE__,3 ). '/images/';
+// $display_dir = 'images/';
 
-
+var_dump(dirname(__FILE__,3 ));
+echo "</br>";
+var_dump($upload_dir);
+echo "</br>";
 // $upload_dir = $tmp_path;
 
 $save_filename = date('YmdHis') . $filename;
@@ -69,28 +72,34 @@ if(!in_array(strtolower($file_ext),$allow_ext)){
     echo '<br>';
 }
 
-if(count($err_msgs) === 0){
-//ファイルはあるかどうか？
+var_dump($tmp_path);
+echo "<br/>";
+var_dump($save_path);
 
 
-    if(is_uploaded_file($tmp_path)){
+if (count($err_msgs) === 0) {
+    //ファイルはあるかどうか？
+
+
+    if (is_uploaded_file($tmp_path)) {
         // echo $filename.'をアップしました。';
         // var_dump($upload_dir.$save_filename);
         // var_dump($tmp_path.'/'.$filename);
-        
-        if(move_uploaded_file($tmp_path, $save_path)){
-            // if(move_uploaded_file($tmp_path, $tmp_path)){
-                echo $filename. 'を'.$upload_dir .'にアップしました。';       
-            //DBに保存(ファイル名、ファイルが存在するファイルパス、キャプション)
-            $result = fileSave($filename,$save_path,$caption);
 
-            }else{
-                echo $tmp_path.'を'.$save_path.'ファイルの移動に失敗しました。';       
+        if (move_uploaded_file($tmp_path, $save_path)) {
+            if (move_uploaded_file($tmp_path, $tmp_path)) {
+                echo $filename . 'を' . $upload_dir . 'にアップしました。';
+                //DBに保存(ファイル名、ファイルが存在するファイルパス、キャプション)
+                $result = fileSave($filename, $save_path, $caption);
+
+            } else {
+                echo $tmp_path . 'を' . $save_path . 'ファイルの移動に失敗しました。';
             }
-    }else{
+        } else {
             echo 'ファイルが選択されていません。';
             echo '<br>';
-    }    
+        }
+    }
 }
 
 
